@@ -1,0 +1,70 @@
+.gallery-container {
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.gallery-image {
+  width: 520px;
+  height: 520px;
+  border-radius: 20%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  /* ✨ Lyxig effekt */
+  box-shadow:
+    10px 12px 24px rgba(0, 0, 0, 0.6),
+    20px 40px 60px rgba(227, 176, 75, 0.25); /* guld-glow */
+  
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+}
+
+/* Visas när bilden är aktiv */
+.gallery-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 🔁 Mobilanpassning */
+@media (max-width: 768px) {
+  .gallery-image {
+    width: 440px;
+    height: 440px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-image {
+    width: 320px;
+    height: 320px;
+  }
+}
+.gallery-header {
+  position: absolute;
+  top: 40px;
+  text-align: center;
+  color: #f8f8f8;
+  z-index: 2;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.gallery-header h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 1px;
+  font-family: 'Georgia', serif;
+}
+
+.gallery-header p {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #ccc;
+}
