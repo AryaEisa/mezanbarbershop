@@ -2,7 +2,6 @@ import React from 'react';
 import vanImage from '../../images/van.png';
 import '../css/HomePage.css';
 import Gallery from './Gallery';
-import History from './History';
 import Contact from './Contact';
 
 function HomePage() {
@@ -19,11 +18,6 @@ function HomePage() {
       <section id="gallery" className="section">
         <Gallery />
       </section>
-
-      <section id="history" className="section">
-        <History />
-      </section>
-
       <section id="contact" className="section">
         <Contact />
       </section>

@@ -1,0 +1,27 @@
+.contact-container {
+ background: black;
+  color: #f0f0f0;
+  padding: 100px 20px;
+  text-align: center;
+  min-height: auto;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-container p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: #e3b04b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
