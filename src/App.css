@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+/* Gör så att hela sidan inte skrollar horisontellt */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hindrar innehåll från att sticka ut */
+* {
+  box-sizing: border-box;
+}
