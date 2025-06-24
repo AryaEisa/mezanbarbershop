@@ -2,51 +2,14 @@
   height: 100vh;
   background: black;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
   position: relative;
-  padding: 20px;
+  padding: 160px 20px 20px; /* luft mellan header och bild */
 }
 
-.gallery-image {
-  width: 520px;
-  height: 520px;
-  border-radius: 20%;
-  object-fit: cover;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-
-  /* ✨ Lyxig effekt */
-  box-shadow:
-    10px 12px 24px rgba(0, 0, 0, 0.6),
-    20px 40px 60px rgba(227, 176, 75, 0.25); /* guld-glow */
-  
-  border: 2px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(2px);
-}
-
-/* Visas när bilden är aktiv */
-.gallery-image.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-/* 🔁 Mobilanpassning */
-@media (max-width: 768px) {
-  .gallery-image {
-    width: 440px;
-    height: 440px;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-image {
-    width: 320px;
-    height: 320px;
-  }
-}
 .gallery-header {
   position: absolute;
   top: 40px;
@@ -67,4 +30,65 @@
   font-size: 1.1rem;
   margin-top: 8px;
   color: #ccc;
+}
+
+.gallery-image {
+  width: 520px;
+  height: 520px;
+  border-radius: 20%;
+  object-fit: cover;
+  position: absolute;
+  top: 180px; /* flytta bilden nedåt så den inte ligger under headern */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  /* ✨ Lyxig effekt */
+  box-shadow:
+    10px 12px 24px rgba(0, 0, 0, 0.6),
+    20px 40px 60px rgba(227, 176, 75, 0.25);
+  
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+}
+
+.gallery-image.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 🔁 Mobilanpassning */
+@media (max-width: 768px) {
+  .gallery-image {
+    width: 440px;
+    height: 440px;
+    top: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-image {
+    width: 320px;
+    height: 320px;
+    top: 160px;
+  }
+
+  .gallery-header h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-header p {
+    font-size: 1rem;
+  }
+}
+
+/* 🔆 Enkel fadeIn-animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
