@@ -1,10 +1,17 @@
 .home {
-  background-size:auto;
-  background-position: center;
   width: 100%;
   height: 100vh;
+  background-color: black;
+  background-image: url('../../images/van.png'); /* Endast om du inte sätter det inline */
+  background-position: center center; /* Centrerar bilden horisontellt + vertikalt */
+  background-repeat: no-repeat;
+  background-size: contain; /* Visa hela bilden utan att beskära */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
+
 
 .overlay {
   position: absolute;
