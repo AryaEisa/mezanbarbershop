@@ -9,7 +9,7 @@ function HomePage() {
     <>
       <div className="home" style={{ backgroundImage: `url(${vanImage})` }}>
         <div className="overlay">
-          <h1>Welcome to Mazan Barbershop</h1>
+          <h1>Welcome to Mazen Barbershop</h1>
           <p>Mobile barbershop – We'll come to you!</p>
           <a href="tel:0616303549" className="call-now">📞 0616 303 549</a>
         </div>
