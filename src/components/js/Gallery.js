@@ -13,7 +13,7 @@ function Gallery() {
     return () => clearInterval(interval);
   }, []);
 
-  const images = Array.from({ length: totalImages }, (_, i) => `/gallery/${i + 1}.jpg`);
+  const images = Array.from({ length: totalImages }, (_, i) => `/gallery/${i + 1}.png`);
 
   return (
     <div className="gallery-container">
