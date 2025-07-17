@@ -18,7 +18,7 @@ function Gallery() {
   return (
     <div className="gallery-container">
       <div className="gallery-header">
-        <h2>Gallery</h2>
+        <h2>Galerij</h2>
         <p>Alles geregeld. Snel, professioneel en altijd scherp.</p>
       </div>
 

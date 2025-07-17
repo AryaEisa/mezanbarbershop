@@ -9,7 +9,7 @@ function Footer() {
         <img src={threesoftLogo} alt="Threesoft Logo" className="footer-logo" />
         <div className="footer-text">
          <p>
-  This website was proudly developed by <a href="https://threesoft.se" target="_blank" rel="noopener noreferrer">Threesoft</a>
+  This website was proudly developed by <a href="https://threesoft.se" target="_blank" rel="noopener noreferrer">Threesoft.se</a>
 </p>
 <p>
   Threesoft is a Scandinavian tech company headquartered in Sweden, working internationally to deliver smart, elegant and user-first solutions across web, mobile, and AI.

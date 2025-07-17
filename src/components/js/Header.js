@@ -30,7 +30,7 @@ function Header() {
       </div>
 
       <ul className={`navbar-right ${menuOpen ? 'show' : ''}`}>
-        <li><a href="#gallery" onClick={() => setMenuOpen(false)}>Gallery</a></li>
+        <li><a href="#gallery" onClick={() => setMenuOpen(false)}>Galerij</a></li>
         <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a></li>
       </ul>
     </nav>
