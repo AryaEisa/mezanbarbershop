@@ -19,7 +19,7 @@ function Gallery() {
     <div className="gallery-container">
       <div className="gallery-header">
         <h2>Gallery</h2>
-        <p>Satisfied customers are our top priority</p>
+        <p>Alles geregeld. Snel, professioneel en altijd scherp.</p>
       </div>
 
       {images.map((imgSrc, index) => (

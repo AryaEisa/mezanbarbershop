@@ -1,5 +1,4 @@
 import React from 'react';
-import vanImage from '../../images/van.png';
 import '../css/HomePage.css';
 import Gallery from './Gallery';
 import Contact from './Contact';
@@ -7,11 +6,22 @@ import Contact from './Contact';
 function HomePage() {
   return (
     <>
-      <div className="home" style={{ backgroundImage: `url(${vanImage})` }}>
+      <div className="home">
         <div className="overlay">
-          <h1>Welcome to Mazen Barbershop</h1>
-          <p>Mobile barbershop – We'll come to you!</p>
-          <a href="tel:0616303549" className="call-now">📞 0616 303 549</a>
+          <div className="text-box">
+            <h1>💈 Geen tijd om naar de kapper te gaan? Geen stress, bro!</h1>
+            <ul>
+              <li>✂️ Mazen Mobiele Barbershop komt gewoon naar jou toe!</li>
+              <li>🚐 Of je nou thuis bent, op werk, op school – wij rijden, jij relaxet.</li>
+            </ul>
+            <h2>Strakke fades?</h2>
+            <h3>Baard weer in model?</h3>
+            <h3>Kids ook knippen?</h3>
+
+            <a href="tel:0616303549" className="call-now" aria-label="Ring Mazen direkt">
+              📞 0616 303 549
+            </a>
+          </div>
         </div>
       </div>
 

@@ -1,54 +1,115 @@
+/* === HEMSEKTION MED BILD === */
 .home {
   width: 100%;
   height: 100vh;
-  background-color: black;
-  background-image: url('../../images/van.png'); /* Endast om du inte sätter det inline */
-  background-position: center center; /* Centrerar bilden horisontellt + vertikalt */
+  background-color: #000;
+  background-image: url('../../images/van.png');
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain; /* Visa hela bilden utan att beskära */
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
-
+/* === MÖRK OVERLAY === */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.61); /* mörk overlay */
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   text-align: center;
-  padding: 20px;
+  padding: 2rem;
+  box-sizing: border-box;
+  color: #ffffff;
 }
 
-.overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+/* === TEXTBOX FÖR INNEHÅLL === */
+.text-box {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
 
-.overlay p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+.text-box h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
 }
 
+.text-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.text-box ul li {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.text-box h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.text-box h3 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* === CALL TO ACTION KNAPP === */
 .call-now {
+  display: inline-block;
+  margin-top: 2rem;
   font-size: 1.2rem;
   background-color: #e3b04b;
   color: #1a1a1a;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 30px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .call-now:hover {
   background-color: #f5c062;
+  transform: scale(1.05);
+}
+
+/* === SEKTIONSSTIL (galleri, kontakt osv.) === */
+.section {
+  padding: 60px 20px;
+  background-color: #000000;
+}
+
+/* === RESPONSIV DESIGN === */
+@media (max-width: 768px) {
+  .text-box h1 {
+    font-size: 2rem;
+  }
+
+  .text-box ul li {
+    font-size: 1.2rem;
+  }
+
+  .text-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-box h3 {
+    font-size: 1.2rem;
+  }
+
+  .call-now {
+    font-size: 1rem;
+    padding: 12px 22px;
+  }
 }
